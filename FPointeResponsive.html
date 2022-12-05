@@ -1,0 +1,240 @@
+<!doctype html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Inter:400,800,900&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<title>Fountain Pointe Condominiums</title>
+<style>
+	
+	:root {
+  --main-radius: 5px;
+  --main-padding: 5px;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1.25fr 1.25fr 1.25fr;
+  grid-template-rows: 0.2fr 2fr 4.5fr 0.2fr;
+  grid-template-areas:
+    "nav nav nav nav"
+    "sidebar main main main"
+    "sidebar content1 content2 content3"
+    "sidebar footer footer footer";
+  grid-gap: 0.2rem;
+  font-weight: 800;
+  font-size: 12px;
+  color: #004d40;
+  text-align: center;
+	border-radius:1em;
+}
+				.bgImg{ object-fit:cover; height:31.5vh; width:99.5%; 
+						box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+							border-radius:.4em;
+								}
+						.columnImg{object-fit:cover; width:100%; height:31.5vh;
+		 					border: 0px;
+  								border-bottom: 4px solid;
+                           border-image: linear-gradient(to right, rgb(0, 210, 255), rgb(58, 123, 213));
+  									border-image-slice: 1;
+							border-radius:1em;
+  									}
+	
+						.columnImg2{object-fit:cover; width:100%; height:31.5vh;
+		 								border: 0px;
+ 			 					border-bottom: 4px solid;
+                               border-image: linear-gradient(to right, rgb(0, 210, 255), rgb(58, 123, 213));
+  									border-image-slice: 1;
+							border-radius:1em;
+  									}
+						.columnImg3{object-fit:cover; width:100%; height:31.5vh;
+										 border: 0px;
+	 									 border-bottom: 4px solid;
+                                     border-image: linear-gradient(to right, rgb(0, 210, 255), rgb(58, 123, 213));
+  										border-image-slice: 1;
+							border-radius:1em;
+  									}
+nav {
+  background: #a7ffeb;
+  grid-area: nav;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+	
+ 
+}
+	nav li{display:inline; padding: 0.65%; line-height:0.4%;}
+
+main {
+  background: white;
+  grid-area: main;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+
+#sidebar {
+  background:#2d2d2d;
+  grid-area: sidebar;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+	font-family: 'Lato', sans-serif; font-weight: bolder; letter-spacing: 0.2px; line-height: -1; padding:5px;
+	
+}
+	.docLinkImg{	width:175px; 		}
+				.sideH	{ color: gold; font-size:2.5em;
+						border-radius: var(--main-radius);
+ 					 	padding-top: var(--main-padding);
+						font-family: 'Lato', sans-serif; font-weight: bolder; letter-spacing: 0.2px; line-height: -3; padding:1%;
+	
+}
+				
+	
+				.sideH2{color: gold; font-size:2em;
+						border-radius: var(--main-radius);
+ 					 	padding-top: var(--main-padding);
+						font-family: 'Lato', sans-serif; font-weight: bolder; letter-spacing: 0.2px; line-height: -3; padding:1%;}
+				
+				.sideP	{color:white;	font-size:1.5em;
+								border-radius: var(--main-radius);
+ 							 padding-top: var(--main-padding);
+								font-family: 'Lato', sans-serif; font-weight: lighter; letter-spacing: 0.85px; line-height: -3; padding:1%;
+	
+	}
+
+	
+#content1 {
+  background:#2d2d2d;
+  grid-area: content1;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+	padding:1em;
+}
+				.content1a{font-family:'Lora', sans-serif; color: gold; font-weight: 200; font-size: 1.5em;}
+				.content1b{font-family:'Lora', sans-serif; color: white; font-weight: 200; font-size: 1.5em;}
+#content2 {
+  background:#2d2d2d;
+  grid-area: content2;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+	padding:1em;
+}
+				.content2a{font-family:'Lora', sans-serif; color: gold; font-weight: 200; font-size: 1.5em;}
+				.content2b{font-family:'Lora', sans-serif; color: white; font-weight: 200; font-size: 1.5em;}
+			
+.subtext{font-family:'Lora', sans-serif; color: white; font-weight: 200; font-size: 1.5em;}
+	
+.officeP{font-family:'Lora', sans-serif; color: gold; font-weight: 200; font-size: 1.9em;}
+
+#content3 {
+  background:#2d2d2d;
+  grid-area: content3;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+	padding:1em;
+}
+				.content3a{font-family:'Lora', sans-serif; color: gold; font-weight: 200; font-size: 1.5em;}
+				.content3b{font-family:'Lora', sans-serif; color: white; font-weight: 200; font-size: 1.5em;}
+footer {
+  background: teal;
+  grid-area: footer;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+a {
+  text-align: center;
+  display: block;
+  font-family: inherit;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 1rem;
+}
+
+@media only screen and (max-width: 550px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+    grid-template-areas:
+      "nav"
+      "sidebar"
+      "main"
+      "content1"
+      "content2"
+      "content3"
+      "footer";
+  }
+}
+	
+
+	</style>
+	</head>
+
+<body>
+	<div class="container">
+  <nav>
+	  <ul>
+		  <li>Home</li>
+	  <li>Announcements</li>
+	  <li>About Us</li>
+	  <li>Documents</li>
+		  <li>FAQ</li>
+	  </ul>
+		</nav>
+		<main>
+			<img src="FOUNTAIN.jpg" alt="fPointeIMG" class="bgImg"/> 
+		
+		</main>
+  <div id="sidebar">
+	  <h1 class="sideH">Important Documents For Homeowners</h1>
+	  <p class="sideP">Please select the document that you would like to submit to the office from the list below. Your personal information will not be stored, your request will be sent directly to the office in PDF format.</p>
+	  <br><br><br>
+	 <p class="sideH2">Submit A Work Order</p>
+	 <p class="sideH2">Submit A Work Order</p>
+	 <p class="sideH2">Submit A Work Order</p>
+	 <p class="sideH2">Submit A Work Order</p>
+		
+		</div>
+  <div id="content1">
+	  <img src="welcome3.png" alt="welcome3PNG" class="columnImg"/>
+	  <p class="content1a"> - Welcome To Fountain Pointe Condominiums - <br><br>9200 Bluegrass Road</p>
+	  <p class="content1a">Philadelphia, Pennsylvania - 19114</p>
+	  
+	  <p class="content1b">Nestled in the bustling neighborhood of North East Philadephia, Fountain Pointe provides a quiet, safe, peaceful and well-maintained living environment for families of all ages.  
+		  <br><br>
+		  Fountain Pointe's close proximity to I-95, Roosevelt Boulevard, and Bustleton Ave provides easy access to all surrounding neighborhoods, local activities and eateries, and guarantees a quick work commute, all while being so peaceful you wouldn't know that you are in Philadelphia.
+		  <br><br>  
+		  There are 450 condominiums surrounding the community pool and club house, where the residents share the fitness and entertainment rooms with a warm, friendly camaraderie that welcomes all.</p></div>
+  <div id="content2">
+	  <img src="frontoffice.png" alt="frontofficePNG" class="columnImg2"/>
+	  <p class="content2a">Front Office (Dana)</p>
+	   <p class="content2a">Contact Our Front Office For:</p>
+	  <br>
+	  	<p class="content2b">Home Buying and Home Selling Questions. Inquiries, Placement and Scheduling of Work Orders. Submission of HOA Payments and Important Documents. Details Such As Upcoming Events, Elections, and Meetings Schedules</p>
+	  <br><br>
+	  		<p class="officeP">Phone Number: 215-941-7687</p>
+			<p class="officeP">Email: fountainpointe@yahoo.com</p>
+			<p class="officeP">HOURS : 9:30am to 5:00pm</p>
+		
+		
+		
+		</div>
+  <div id="content3">
+	  <img src="contractor.jpg" alt="contractorJPG" class="columnImg3" />
+	  <p class="content3a">Contractors:</p>
+		<p class="content3a">George and Les</p>
+	  	<p class="content3b">Our contractors George and Les are polite and professional, they are here to help with a wide variety of contracting, plumbing, HVAC, and handyman needs that arise for all residents of Fountain Pointe.</p>
+	  <br>
+	  <p class="content3b">To contact George and Les to schedule their services, please submit a work order form to the Front Office. This can be done online by clicking below, or in-person at the office, or via phone call to the office.</p>
+	  <br><br>
+	  <p class="content3a">WORK ORDER LINK</p>
+		
+		</div>
+  <footer>Footer</footer>
+</div>
+
+</body>
+</html>
